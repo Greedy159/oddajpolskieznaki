@@ -1,0 +1,13 @@
+.container {
+  max-width: 70rem;
+  width: 90%;
+  text-align: center;
+  margin: auto;
+  margin-top: 10rem;
+}
+
+ul {
+  width: auto;
+  list-style-type: none;
+  padding-left: 0 !important;
+}

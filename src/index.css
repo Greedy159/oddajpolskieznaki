@@ -1,0 +1,13 @@
+import url
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Heebo", sans-serif;
+  background-image: url("https://www.redbrick.me/wp-content/uploads/2021/07/photo-1507842217343-583bb7270b66.jpg");
+  background-color: rgb(26, 25, 25);
+}

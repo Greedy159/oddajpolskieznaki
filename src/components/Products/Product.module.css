@@ -1,0 +1,118 @@
+@keyframes books-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+li {
+  width: auto;
+}
+
+.card {
+  display: flex;
+  margin: auto;
+  margin-top: 3rem;
+  box-shadow: 0 1px 18px 10px rgb(0, 0, 0, 0.25);
+  border-radius: 14px;
+  background-color: wheat;
+  animation: books-appear 1s ease-out forwards;
+}
+
+.image {
+  display: flex;
+}
+
+.test {
+  max-width: 18rem;
+  position: relative;
+}
+
+.test img {
+  max-width: 18rem;
+  height: 28rem;
+  border-radius: 14px 0 0 14px;
+}
+
+.test2 {
+  padding: 1rem;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.middiv {
+  padding: 1rem;
+  width: 100%;
+  max-width: 30rem;
+  text-align: center;
+}
+
+.description {
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  max-width: 60%;
+}
+
+.card header {
+  padding-top: 1rem;
+  margin: auto;
+  width: 90%;
+  border-bottom: 1px solid rgb(43, 43, 43);
+}
+
+.description * {
+  background-color: rgba(233, 205, 154, 0.849) !important;
+  border-color: black !important;
+  border-radius: 14px !important;
+  outline: none !important;
+  box-shadow: none !important;
+  color: black !important;
+}
+
+.closeButton * {
+  position: relative !important;
+  padding: 1rem !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.p1 * {
+  margin:auto;
+}
+
+.price {
+  padding-top: 3rem;
+  margin-bottom: 0;
+}
+.details {
+  border-radius: 14px;
+}
+
+h4 {
+  padding-bottom: 3rem;
+}
+
+/* .accordion {
+  background-color: wheat;
+}
+
+.accordion button {
+  background-color: wheat !important;
+  color: black !important;
+}
+
+.accordion button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.accordion-item {
+  border-color: black !important;
+} */

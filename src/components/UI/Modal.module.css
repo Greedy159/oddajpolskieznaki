@@ -1,0 +1,23 @@
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    padding-top: 1.3rem;
+    background-color: wheat;
+    border-radius: 3px 3px 0 0;
+    border-bottom: 1px solid gray;
+}
+
+.modalBody {
+    padding: 1rem;
+    padding-top: 1.3rem;
+    background-color: wheat;
+}
+
+.modalFooter {
+    padding: 1rem;
+    background-color: wheat;
+    text-align: right;
+    border-radius: 0 0 3px 3px;
+}
+

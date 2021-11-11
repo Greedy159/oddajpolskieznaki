@@ -1,0 +1,10 @@
+// change the theme
+// $theme-colors: (
+//   "primary": rgb(224, 0, 231),
+//   "danger": #ff4136
+// );
+
+$primary: transparent;
+$secondary: red;
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
