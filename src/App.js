@@ -62,7 +62,8 @@ const productsArray = [
   {
     title: "Pony",
     author: "R. J. Palacio",
-    description: "An enthralling adventure that will show readers how to choose courage. A modern classic about a boy on a quest to rescue his father, with only a ghost as his companion and a mysterious pony as his guide.",
+    description:
+      "An enthralling adventure that will show readers how to choose courage. A modern classic about a boy on a quest to rescue his father, with only a ghost as his companion and a mysterious pony as his guide.",
     price: "18.99",
     category: "kids",
     picture: "https://images2.penguinrandomhouse.com/cover/9780553508116",
@@ -72,25 +73,26 @@ const productsArray = [
 ];
 
 function App() {
-
-  
-  const [filteredArray, setFilteredArray] = useState(productsArray)
+  const [filteredArray, setFilteredArray] = useState(productsArray);
 
   const removeHandler = (title) => {
-    setFilteredArray(filteredArray.filter(item => item.title !== title))
+    setFilteredArray(filteredArray.filter((item) => item.title !== title));
   };
 
   const addHandler = (book) => {
-    console.log(book)
-    const arrayWithAddedBook = [...filteredArray, book]
-    setFilteredArray(arrayWithAddedBook)
-  }
+    console.log(book);
+    const arrayWithAddedBook = [...filteredArray, book];
+    setFilteredArray(arrayWithAddedBook);
+  };
 
   return (
     <Fragment>
       <Navbar />
-      <Form addHandler={addHandler}/>
-      <ProductsList productsArray={filteredArray} removeHandler={removeHandler} />
+      <Form addHandler={addHandler} />
+      <ProductsList
+        productsArray={filteredArray}
+        removeHandler={removeHandler}
+      />
     </Fragment>
   );
 }

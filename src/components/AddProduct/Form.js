@@ -1,6 +1,7 @@
 import { useState, Fragment } from "react";
 import classes from "./Form.module.css";
 import { FormControl, FormGroup, InputGroup, Row, Col } from "react-bootstrap";
+import Form from "react-bootstrap/Form";
 import React from "react";
 import Modal from "../UI/Modal";
 
@@ -98,6 +99,7 @@ const Formx = (props) => {
   //     enteredRating: event.target.value
   //   });
   // };
+  const [errorArray1, setErrorArray1] = useState([]);
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -116,7 +118,7 @@ const Formx = (props) => {
     if (!regexTestAgeRestriction.test(collectedAgeRestriction)) {
       errorArray.push("Invalid Age Restriction Input.");
     }
-    if (collectedAgeRestriction <= 0) {
+    if (collectedAgeRestriction === 0) {
       setCollectedAgeRestriction("No Restriction.");
     }
     if (collectedAgeRestriction > 18) {
@@ -142,9 +144,9 @@ const Formx = (props) => {
     if (!regexTestURL.test(collectedPicture)) {
       errorArray.push("Invalid Image URL.");
     }
-    console.log(errorArray);
+    setErrorArray1(errorArray);
     if (errorArray.length > 0) {
-      setShow(true)
+      setShow(true);
       return;
     }
 
@@ -197,7 +199,7 @@ const Formx = (props) => {
 
   return (
     <Fragment>
-      <Modal show={show} setShow={setShow} />
+      <Modal show={show} setShow={setShow} errorArray={errorArray1} />
       <form className={classes.form} onSubmit={submitHandler}>
         <h1>Add a new book:</h1>
         <FormGroup>
@@ -214,7 +216,7 @@ const Formx = (props) => {
                   value={collectedTitle}
                 />
               </InputGroup>
-              <InputGroup className="p-3">
+              {/* <InputGroup className="p-3">
                 <InputGroup.Text bsPrefix={classes.custom2}>
                   Category
                 </InputGroup.Text>
@@ -224,6 +226,22 @@ const Formx = (props) => {
                   onChange={categoryHandler}
                   value={collectedCategory}
                 />
+              </InputGroup> */}
+              <InputGroup className="p-3">
+                <InputGroup.Text bsPrefix={classes.custom2}>
+                  Category
+                </InputGroup.Text>
+                <Form.Select
+                  bsPrefix={classes.custom1}
+                  aria-label="Default select example"
+                  onChange={categoryHandler}
+                  value={collectedCategory}
+                >
+                  {/* <option>{"Choose category"}</option> */}
+                  <option value="1">Horror</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </Form.Select>
               </InputGroup>
               <InputGroup className="p-3">
                 <InputGroup.Text bsPrefix={classes.custom2}>

@@ -11,16 +11,16 @@
 }
 
 .form button {
-    width: 10rem;
-    height: 2.5rem;
-    margin: 1rem;
-    background-color: rgba(224, 188, 121, 0.849);
-    border: 1px solid rgb(212, 162, 68);
-    border-radius: 3px;
+  width: 10rem;
+  height: 2.5rem;
+  margin: 1rem;
+  background-color: rgba(224, 188, 121, 0.849);
+  border: 1px solid rgb(212, 162, 68);
+  border-radius: 3px;
 }
 
 .form button:hover {
-    background-color: rgba(216, 171, 87, 0.849);
+  background-color: rgba(216, 171, 87, 0.849);
 }
 
 .textarea {
@@ -67,6 +67,11 @@
   appearance: none;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+
+.custom1 option {
+  text-align: center;
 }
 
 .custom2 {
