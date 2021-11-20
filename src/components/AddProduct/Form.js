@@ -7,16 +7,6 @@ import Modal from "../UI/Modal";
 
 const Formx = (props) => {
   const [show, setShow] = useState(false);
-  // const [collectedData, setCollectedData] = useState({
-  //   enteredTitle: "",
-  //   enteredAuthor: "",
-  //   enteredDescription: "",
-  //   enteredPrice: "",
-  //   enteredCategory: "",
-  //   enteredPicture: "",
-  //   enteredAgeRestriction: "",
-  //   enteredRating: "",
-  // });
 
   const [collectedTitle, setCollectedTitle] = useState("");
   const [collectedAuthor, setCollectedAuthor] = useState("");
@@ -51,54 +41,7 @@ const Formx = (props) => {
   const ratingHandler = (event) => {
     setCollectedRating(event.target.value);
   };
-  // const titleHandler = (event) => {
-  //   setCollectedData({
-  //     ...collectedData,
-  //     enteredTitle: event.target.value,
-  //   });
-  // };
-  // const authorHandler = (event) => {
-  //   setCollectedData({
-  //     ...collectedData,
-  //     enteredAuthor: event.target.value,
-  //   });
-  // };
-  // const descriptionHandler = (event) => {
-  //   setCollectedData({
-  //     ...collectedData,
-  //     enteredDescription: event.target.value,
-  //   });
-  // };
-  // const priceHandler = (event) => {
-  //   setCollectedData({
-  //     ...collectedData,
-  //     enteredPrice: event.target.value,
-  //   });
-  // };
-  // const categoryHandler = (event) => {
-  //   setCollectedData({
-  //     ...collectedData,
-  //     enteredCategory: event.target.value,
-  //   });
-  // };
-  // const pictureHandler = (event) => {
-  //   setCollectedData({
-  //     ...collectedData,
-  //     enteredPicture: event.target.value,
-  //   });
-  // };
-  // const ageRestrictionHandler = (event) => {
-  //   setCollectedData({
-  //     ...collectedData,
-  //     enteredAgeRestriction: event.target.value,
-  //   });
-  // };
-  // const ratingHandler = (event) => {
-  //   setCollectedData({
-  //     ...collectedData,
-  //     enteredRating: event.target.value
-  //   });
-  // };
+
   const [errorArray1, setErrorArray1] = useState([]);
 
   const submitHandler = (event) => {
@@ -169,33 +112,9 @@ const Formx = (props) => {
     setCollectedCategory("");
     setCollectedAuthor("");
     setCollectedAgeRestriction("");
-    // const newBookData = {
-    //   title: collectedData.enteredTitle,
-    //   rating: (+collectedData.enteredRating).toFixed(2),
-    //   price: (+collectedData.enteredPrice).toFixed(2),
-    //   picture: collectedData.enteredPicture,
-    //   description: collectedData.enteredDescription,
-    //   category: collectedData.enteredCategory,
-    //   author: collectedData.enteredAuthor,
-    //   ageRestriction: collectedData.enteredAgeRestriction,
-    // };
-    // setCollectedData({
-    //   enteredTitle: "",
-    //   enteredAuthor: "",
-    //   enteredDescription: "",
-    //   enteredPrice: "",
-    //   enteredCategory: "",
-    //   enteredPicture: "",
-    //   enteredAgeRestriction: "",
-    //   enteredRating: "",
-    // });
-    props.addHandler(newBookData);
-    // setShow(true);
-  };
 
-  // const testRegex = /^a/
-  // console.log(testRegex.test("abcd"))
-  // regex101
+    props.addHandler(newBookData);
+  };
 
   return (
     <Fragment>
@@ -216,17 +135,6 @@ const Formx = (props) => {
                   value={collectedTitle}
                 />
               </InputGroup>
-              {/* <InputGroup className="p-3">
-                <InputGroup.Text bsPrefix={classes.custom2}>
-                  Category
-                </InputGroup.Text>
-                <FormControl
-                  bsPrefix={classes.custom1}
-                  placeholder=" ex. Horror "
-                  onChange={categoryHandler}
-                  value={collectedCategory}
-                />
-              </InputGroup> */}
               <InputGroup className="p-3">
                 <InputGroup.Text bsPrefix={classes.custom2}>
                   Category
@@ -235,12 +143,22 @@ const Formx = (props) => {
                   bsPrefix={classes.custom1}
                   aria-label="Default select example"
                   onChange={categoryHandler}
-                  value={collectedCategory}
+                  defaultValue=""
                 >
-                  {/* <option>{"Choose category"}</option> */}
-                  <option value="1">Horror</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
+                  <option value="" disabled>
+                    {"Select category"}
+                  </option>
+                  <option value="Action">Action</option>
+                  <option value="Comedy">Comedy</option>
+                  <option value="Documentary">Documentary</option>
+                  <option value="Drama">Drama</option>
+                  <option value="Fantasy">Fantasy</option>
+                  <option value="Horror">Horror</option>
+                  <option value="Mystery">Mystery</option>
+                  <option value="Romance">Romance</option>
+                  <option value="Sci-fi">Sci-fi</option>
+                  <option value="Thriller">Thriller</option>
+                  <option value="TWestern">Western</option>
                 </Form.Select>
               </InputGroup>
               <InputGroup className="p-3">
